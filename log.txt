@@ -1,0 +1,117 @@
+2022-04-26 19:49:58 WARN  LoggingUtil:67 - Invalid input detected. Please try again
+2022-04-26 19:50:10 INFO  LoggingUtil:23 - New user was registered
+2022-04-26 19:50:14 WARN  LoggingUtil:92 - Invalid input detected
+2022-04-26 19:50:18 WARN  LoggingUtil:92 - Invalid input detected
+2022-04-26 21:45:38 INFO  LoggingUtil:27 - New user was registered
+2022-04-26 21:51:41 INFO  LoggingUtil:27 - New user was registered
+2022-04-26 21:54:00 INFO  LoggingUtil:27 - New user was registered
+2022-04-26 22:09:17 INFO  LoggingUtil:27 - New user was registered
+2022-04-26 22:11:45 INFO  LoggingUtil:27 - New user was registered
+2022-04-27 08:58:19 INFO  LoggingUtil:27 - New user was registered
+2022-04-27 09:02:17 INFO  LoggingUtil:27 - New user was registered
+2022-04-27 09:56:27 INFO  LoggingUtil:28 - New user was registered
+2022-04-27 09:58:38 INFO  LoggingUtil:29 - New user was registered
+2022-04-27 11:27:23 INFO  LoggingUtil:29 - New user was registered
+2022-04-27 12:13:00 INFO  LoggingUtil:29 - New user was registered
+2022-04-27 12:15:25 INFO  LoggingUtil:31 - New user was registered
+2022-04-27 12:16:24 INFO  LoggingUtil:32 - New user was registered
+2022-04-27 12:45:30 INFO  LoggingUtil:29 - New user was registered
+2022-04-27 13:44:27 INFO  LoggingUtil:29 - New user was registered
+2022-04-27 15:56:17 INFO  LoggingUtil:29 - New user was registered
+2022-04-30 18:16:58 INFO  LoggingUtil:21 - New user was registered
+2022-04-30 18:19:22 ERROR LoggingUtil:32 - Login attempt failed
+2022-04-30 18:40:52 INFO  LoggingUtil:21 - New user was registered
+2022-04-30 18:41:34 INFO  LoggingUtil:21 - New user was registered
+2022-04-30 18:47:26 ERROR LoggingUtil:32 - Login attempt failed
+2022-04-30 19:31:38 INFO  LoggingUtil:29 - User rick.sanchez@mail.com logged in successfully
+2022-04-30 19:46:04 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 08:12:18 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 08:14:55 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 08:35:59 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 08:38:57 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 08:41:24 INFO  LoggingUtil:45 - The user has been deleted from the database
+2022-05-01 08:47:09 INFO  LoggingUtil:45 - The user has been deleted from the database
+2022-05-01 08:47:27 INFO  LoggingUtil:45 - The user has been deleted from the database
+2022-05-01 08:49:09 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 09:10:56 INFO  LoggingUtil:45 - The user has been deleted from the database
+2022-05-01 09:11:07 INFO  LoggingUtil:39 - User with id: 0 has updated their information
+2022-05-01 11:03:41 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:03:41 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:29:45 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:29:45 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:35:09 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:35:09 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:36:51 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:36:51 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:38:13 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:38:13 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:40:36 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:40:36 INFO  LoggingUtil:45 - User with id: 0 has updated their information
+2022-05-01 11:42:49 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:42:49 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:46:34 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:46:34 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:48:45 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:54:22 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:57:42 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 11:59:24 ERROR LoggingUtil:42 - morty.smith@mail.com does not exist in the database
+2022-05-01 11:59:43 ERROR LoggingUtil:42 - morty.smith@mail.com does not exist in the database
+2022-05-01 12:04:45 ERROR LoggingUtil:42 - morty.smith@mail.com does not exist in the database
+2022-05-01 12:05:06 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:05:17 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:05:45 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:06:31 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:07:34 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:10:45 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:12:23 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:13:19 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 12:15:45 INFO  LoggingUtil:51 - User with id: 1 has been deleted from the database
+2022-05-01 12:16:21 INFO  LoggingUtil:51 - User with id: 7 has been deleted from the database
+2022-05-01 12:28:00 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:32:18 INFO  LoggingUtil:51 - User with id: 8 has been deleted from the database
+2022-05-01 12:33:05 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:33:21 INFO  LoggingUtil:51 - User with id: 9 has been deleted from the database
+2022-05-01 12:34:45 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:35:12 INFO  LoggingUtil:51 - User with id: 10 has been deleted from the database
+2022-05-01 12:43:58 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:44:43 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 12:47:59 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 12:50:53 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 12:52:17 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 12:59:37 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 13:00:05 INFO  LoggingUtil:51 - User with id: 65 has been deleted from the database
+2022-05-01 13:01:42 INFO  LoggingUtil:51 - User with id: 15 has been deleted from the database
+2022-05-01 13:01:59 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 13:13:40 INFO  LoggingUtil:51 - User with id: 113 has been deleted from the database
+2022-05-01 13:13:57 INFO  LoggingUtil:51 - User with id: 11 has been deleted from the database
+2022-05-01 13:21:51 INFO  LoggingUtil:56 - User with id: 16 has been deleted from the database
+2022-05-01 13:33:30 ERROR LoggingUtil:52 - null does not exist in the database
+2022-05-01 13:35:08 ERROR LoggingUtil:52 - User does not exist in the database
+2022-05-01 13:35:29 INFO  LoggingUtil:55 - User with id: 15 has been deleted from the database
+2022-05-01 13:42:04 INFO  LoggingUtil:21 - A new user was registered
+2022-05-01 13:48:08 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 13:48:52 INFO  LoggingUtil:44 - User with id: 0 has updated their information
+2022-05-01 13:59:36 ERROR LoggingUtil:41 - hgj@jkfg does not exist in the database
+2022-05-01 14:02:15 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 14:08:44 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 14:18:47 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 14:59:42 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:14:07 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:41:06 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:43:01 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:45:39 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:48:18 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:48:49 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:49:40 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:52:45 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 15:56:35 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:00:28 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:02:59 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:04:31 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:22:34 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:24:06 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 16:26:43 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 17:19:22 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 17:27:03 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 17:27:54 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
+2022-05-01 17:29:01 INFO  LoggingUtil:29 - User morty.smith@mail.com logged in successfully
