@@ -1,6 +1,4 @@
-# Project 0: Banking Application
-
-## Due: Wednesday May 4, 2022
+# Project: Banking Application
 
 ## Project Description:
 
