@@ -20,6 +20,8 @@ public class AccountController {
     }
 
     public Handler handleCreateAccount = (ctx) -> {
+        boolean hasAccount = true;
+
         if(ctx.req.getSession().getAttribute("id") == null) {
             ctx.status(401);
             ctx.result("You must login to create an account");
@@ -33,9 +35,8 @@ public class AccountController {
             User u = new User(userID, firstName, lastName, email, password);
 
             aServ.addAccount(u);
-
-            ctx.status(401);
             ctx.result(email + " added a new bank account");
+            ctx.req.getSession().setAttribute("hasAccount", ""+hasAccount);
         }
     };
 
@@ -45,10 +46,9 @@ public class AccountController {
         if(ctx.req.getSession().getAttribute("id") == null) {
             ctx.status(401);
             ctx.result("You must login to deposit into an account");
-        } else if (a == null) {
-            // doesn't work - you don't really need to create an account before making deposit
+        } else if (ctx.req.getSession().getAttribute("hasAccount") == null) {
             ctx.result("You must create an account before making a deposit");
-        } else {
+        } else if (ctx.req.getSession().getAttribute("hasAccount") != null) {
             aServ.deposit(a);
             ctx.result(a.getBalance() + " added");
         }
@@ -59,11 +59,10 @@ public class AccountController {
 
         if(ctx.req.getSession().getAttribute("id") == null) {
             ctx.status(401);
-            ctx.result("You must login to withdraw from your account");
-        } else if (a == null) {
-            // doesn't work - you don't really need to create an account before making deposit
-            ctx.result("You must create an account before making a deposit");
-        } else {
+            ctx.result("You must login to withdraw into an account");
+        } else if (ctx.req.getSession().getAttribute("hasAccount") == null) {
+            ctx.result("You must create an account before making a withdraw");
+        } else if (ctx.req.getSession().getAttribute("hasAccount") != null) {
             aServ.withdraw(a);
             ctx.result(a.getBalance() + " added");
         }

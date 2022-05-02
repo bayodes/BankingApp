@@ -39,9 +39,9 @@ public class Driver {
             });
 
             path("accounts", () -> {
-                post("/", aCon.handleCreateAccount);
-                put("/", aCon.handleDeposit);
-                put("/", aCon.handleWithdraw);
+                post("/create", aCon.handleCreateAccount);
+                put("/deposit", aCon.handleDeposit);
+                put("/withdraw", aCon.handleWithdraw);
 //                delete("/{id}", uCon.handleDeleteUser);
             });
         });

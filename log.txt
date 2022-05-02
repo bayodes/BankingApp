@@ -179,3 +179,37 @@
 2022-05-02 08:55:41 INFO  LoggingUtil:31 - Money was just added your account
 2022-05-02 08:59:20 INFO  LoggingUtil:30 - User morty.smith@mail.com logged in successfully
 2022-05-02 08:59:24 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 10:54:51 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 10:55:47 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 10:55:50 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 10:55:55 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 11:04:49 ERROR LoggingUtil:34 - Login attempt failed
+2022-05-02 11:05:30 ERROR LoggingUtil:53 - User does not exist in the database
+2022-05-02 11:05:58 ERROR LoggingUtil:34 - Login attempt failed
+2022-05-02 11:06:02 ERROR LoggingUtil:43 - hgj@jkfg does not exist in the database
+2022-05-02 11:06:25 INFO  LoggingUtil:22 - A new user was registered
+2022-05-02 11:06:28 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 11:13:55 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 11:14:13 INFO  LoggingUtil:37 - Money was just taken out of your account
+2022-05-02 11:18:44 ERROR LoggingUtil:34 - Login attempt failed
+2022-05-02 11:48:07 INFO  LoggingUtil:22 - A new user was registered
+2022-05-02 11:48:12 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-02 11:48:15 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 11:48:20 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 11:51:02 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 11:53:04 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-02 11:53:13 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 11:55:34 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-02 13:40:11 INFO  LoggingUtil:21 - A new user was registered
+2022-05-02 13:40:18 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 13:41:57 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 13:42:12 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 13:44:39 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 13:50:19 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 14:02:07 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 14:02:25 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 14:02:31 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 16:52:38 INFO  LoggingUtil:21 - A new user was registered
+2022-05-02 16:52:48 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 16:52:51 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 16:53:22 INFO  LoggingUtil:31 - Money was just added your account

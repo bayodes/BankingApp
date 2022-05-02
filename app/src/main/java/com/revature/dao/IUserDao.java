@@ -8,9 +8,6 @@ public interface IUserDao {
     // Create - Registering a new user
     public User createUser(User u);
 
-    // Read
-    //public List<User> readAllUsers();
-
     // Read - Logging In
     public User readUserByEmail(String email);
 
@@ -19,5 +16,11 @@ public interface IUserDao {
 
     // Delete - Deleting a user from the database
     public boolean deleteUser(User u);
+
+    // Read - Check to see if the database is empty
+    public boolean isEmpty(String email);
+
+    // Read - Check to see if the user exists
+    public boolean isFound(User u);
 
 }

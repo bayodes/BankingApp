@@ -18,42 +18,56 @@ public class UserService {
         User register = new User(0, firstName, lastName, email, password);
         User u = uDao.createUser(register);
 
-        u.getListOfUsers().add(u);
         LoggingUtil.logger.info("A new user was registered");
         return u;
     }
 
     public User loginUser(String email, String password) {
 
+        boolean isEmpty = uDao.isEmpty(email);
         User u = uDao.readUserByEmail(email);
 
         if (u != null && password.equals(u.getPassword())) {
             LoggingUtil.logger.info("User " + u.getEmail() + " logged in successfully");
-            return u;
-        } else {
+        } else if (isEmpty == true) {
+            LoggingUtil.logger.error("There are no users in the database. Register a user");
+        } else if (!password.equals(u.getPassword()) || u == null) {
             LoggingUtil.logger.error("Login attempt failed");
-            return u;
+        } else if (u == null) {
+            LoggingUtil.logger.error(email + " does not exist in the database");
         }
+
+        return u;
     }
 
     public User updateUser(User u) {
+        boolean isEmpty = uDao.isEmpty(u.getEmail());
+        boolean isFound = uDao.isFound(u);
         User user = uDao.updateUser(u);
 
-        if (user == null) {
+        if (isEmpty == true) {
+            LoggingUtil.logger.error("There are no users in the database. Register a user before updating their information");
+        } else if (isFound == false) {
             LoggingUtil.logger.error(u.getEmail() + " does not exist in the database");
         } else {
-            LoggingUtil.logger.info("User with id: " + u.getUserID() + " has updated their information");
+            LoggingUtil.logger.info(u.getUserID() + " has updated their information");
         }
         return user;
     }
 
     public boolean deleteUser(User u) {
+        boolean isEmpty = uDao.isEmpty(u.getEmail());
+        boolean isFound = uDao.isFound(u);
 
-        if (uDao.deleteUser(u) == false) {
-            LoggingUtil.logger.error("User does not exist in the database");
+        if (isEmpty == true) {
+            LoggingUtil.logger.error("There are no users in the database. Can't delete a user that doesn't exist");
+            return false;
+        } else if (isFound == false) {
+            LoggingUtil.logger.error(u.getEmail() + " does not exist in the database");
             return false;
         } else {
-            LoggingUtil.logger.info("User with id: " + u.getUserID() + " has been deleted from the database");
+            uDao.deleteUser(u);
+            LoggingUtil.logger.info(u.getEmail() + " has been deleted from the database");
             return true;
         }
     }

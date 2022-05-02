@@ -40,7 +40,7 @@ public class AccountDaoJDBC implements IAccountDao{
         Connection c = cs.getConnection();
         //double amount = a.getBalance();
 
-        String sql = "update accounts set balance = ? where account_id = ?";
+        String sql = "update accounts set balance = ? where users_fk = ?";
 
         try {
             PreparedStatement ps = c.prepareStatement(sql);
