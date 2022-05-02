@@ -14,11 +14,13 @@ public class UserService {
         this.uDao = uDao;
     }
 
-    public void registerUser(String firstName, String lastName, String email, String password) {
+    public User registerUser(String firstName, String lastName, String email, String password) {
         User register = new User(0, firstName, lastName, email, password);
-        uDao.createUser(register);
+        User u = uDao.createUser(register);
 
+        u.getListOfUsers().add(u);
         LoggingUtil.logger.info("A new user was registered");
+        return u;
     }
 
     public User loginUser(String email, String password) {

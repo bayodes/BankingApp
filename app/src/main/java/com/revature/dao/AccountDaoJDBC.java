@@ -4,6 +4,7 @@ import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.utils.ConnectionSingleton;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -16,16 +17,15 @@ public class AccountDaoJDBC implements IAccountDao{
      * @param a
      */
     @Override
-    public void createAccount(Account a) {
+    public void createAccount(Account a, User u) {
         Connection c = cs.getConnection();
 
         String sql = "insert into accounts (balance, users_fk) values " +
-                "('" + a.getBalance() + "','" + a.getUserAccount().getUserID() + "')";
+                "('" + a.getBalance() + "','" + u.getUserID() + "')";
 
         try {
             Statement s = c.createStatement();
             s.execute(sql);
-
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -36,16 +36,42 @@ public class AccountDaoJDBC implements IAccountDao{
      *
      */
     @Override
-    public void addToAccount() {
+    public void addToAccount(Account a) {
+        Connection c = cs.getConnection();
+        //double amount = a.getBalance();
 
+        String sql = "update accounts set balance = ? where account_id = ?";
+
+        try {
+            PreparedStatement ps = c.prepareStatement(sql);
+            ps.setDouble(1, a.getBalance());
+            ps.setInt(2, a.getAccountID());
+
+            ps.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
      *
      */
     @Override
-    public void subtractFromAccount() {
+    public void subtractFromAccount(Account a) {
+        Connection c = cs.getConnection();
+        //double amount = a.getBalance();
 
+        String sql = "update accounts set balance = ? where account_id = ?";
+
+        try {
+            PreparedStatement ps = c.prepareStatement(sql);
+            ps.setDouble(1, a.getBalance());
+            ps.setInt(2, a.getAccountID());
+
+            ps.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**

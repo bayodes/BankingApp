@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface IAccountDao {
 
-    public void createAccount(Account a);
+    public void createAccount(Account a, User u);
 
-    public void addToAccount();
+    public void addToAccount(Account amount);
 
-    public void subtractFromAccount();
+    public void subtractFromAccount(Account amount);
 
     //public void transferToAccount();
 

@@ -20,9 +20,15 @@ public class UserController {
     public Handler handleRegister = (ctx) -> {
         RegisterObject ro = oMap.readValue(ctx.body(), RegisterObject.class);
 
-        System.out.println(ro);
+        if(ro.email.equals(ro.email)) {
 
-        uServ.registerUser(ro.firstName, ro.lastName, ro.email, ro.password);
+        }
+        User u = uServ.registerUser(ro.firstName, ro.lastName, ro.email, ro.password);
+        ctx.req.getSession().setAttribute("id", ""+u.getUserID());
+        ctx.req.getSession().setAttribute("fName", ""+u.getFirstName());
+        ctx.req.getSession().setAttribute("lName", ""+u.getLastName());
+        ctx.req.getSession().setAttribute("email", ""+u.getEmail());
+        ctx.req.getSession().setAttribute("password", ""+u.getPassword());
         ctx.status(201);
         ctx.result("Created user: " + ro.firstName + " " + ro.lastName);
     };
@@ -32,14 +38,12 @@ public class UserController {
 
         User u = uServ.loginUser(lo.email, lo.password);
 
-        System.out.println(lo);
-
         if (u != null) {
-            ctx.req.getSession().setAttribute("id", u.getUserID());
-//            ctx.req.getSession().setAttribute("fName", u.getFirstName());
-//            ctx.req.getSession().setAttribute("lName", u.getLastName());
-//            ctx.req.getSession().setAttribute("email", u.getEmail());
-//            ctx.req.getSession().setAttribute("password", u.getPassword());
+            ctx.req.getSession().setAttribute("id", ""+u.getUserID());
+            ctx.req.getSession().setAttribute("fName", ""+u.getFirstName());
+            ctx.req.getSession().setAttribute("lName", ""+u.getLastName());
+            ctx.req.getSession().setAttribute("email", ""+u.getEmail());
+            ctx.req.getSession().setAttribute("password", ""+u.getPassword());
             ctx.result(oMap.writeValueAsString(u));
         } else {
             ctx.status(403);

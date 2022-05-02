@@ -5,6 +5,8 @@ import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.utils.LoggingUtil;
 
+import java.util.Arrays;
+
 public class AccountService {
 
     private IAccountDao aDao;
@@ -17,20 +19,22 @@ public class AccountService {
 
     public void addAccount(User u) {
         Account createAccount = new Account(0, 0.00, u);
-        aDao.createAccount(createAccount);
+        aDao.createAccount(createAccount, u);
 
-
-        System.out.println(u);
         u.getListOfAccounts().add(createAccount);
         LoggingUtil.logger.info("A new account was created");
     }
 
-    public void deposit(int amount) {
+    public void deposit(Account a) {
 
+        aDao.addToAccount(a);
+        LoggingUtil.logger.info("Money was just added your account");
     }
 
-    public void withdraw(int amount, int balance) {
+    public void withdraw(Account a) {
 
+        aDao.subtractFromAccount(a);
+        LoggingUtil.logger.info("Money was just taken out of your account");
     }
 
     public void transferMoney(int amount, int balance) {

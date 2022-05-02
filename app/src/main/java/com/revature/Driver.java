@@ -40,8 +40,8 @@ public class Driver {
 
             path("accounts", () -> {
                 post("/", aCon.handleCreateAccount);
-//                post("/login", uCon.handleLogin);
-//                put("/", uCon.handleUpdateUser);
+                put("/", aCon.handleDeposit);
+                put("/", aCon.handleWithdraw);
 //                delete("/{id}", uCon.handleDeleteUser);
             });
         });

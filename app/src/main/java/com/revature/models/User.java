@@ -11,6 +11,7 @@ public class User {
     private String email;
     private String password;
     private List<Account> listOfAccounts;
+    private List<User> listOfUsers;
 
     public User(){}
 
@@ -21,16 +22,18 @@ public class User {
         this.email = email;
         this.password = password;
         this.listOfAccounts = new ArrayList<>();
-        //this.listOfAccounts.add(a);
+        this.listOfUsers = new ArrayList<>();
     }
 
-    public User(int userID, String firstName, String lastName, String email, String password, List<Account> listOfAccounts) {
+    public User(int userID, String firstName, String lastName, String email,
+                String password, List<Account> listOfAccounts, List<User> listOfUsers) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.listOfAccounts = listOfAccounts;
+        this.listOfUsers = listOfUsers;
     }
 
     public int getUserID() {
@@ -81,6 +84,14 @@ public class User {
         this.listOfAccounts = listOfAccounts;
     }
 
+    public List<User> getListOfUsers() {
+        return listOfUsers;
+    }
+
+    public void setListOfUsers(List<User> listOfUsers) {
+        this.listOfUsers = listOfUsers;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -90,6 +101,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", listOfAccounts=" + listOfAccounts +
+                ", listOfUsers=" + listOfUsers +
                 '}';
     }
 }

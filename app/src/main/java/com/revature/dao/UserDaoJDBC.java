@@ -14,19 +14,39 @@ public class UserDaoJDBC implements IUserDao {
      * @param u the user object used to place into the database
      */
     @Override
-    public void createUser(User u) {
+    public User createUser(User u) {
         //To create a user, we must get our connection, create a statement, and execute said statement
         Connection c = cs.getConnection();
 
-        String sql = "insert into users (first_name, last_name, email, password) values " +
-                "('" + u.getFirstName() +"','" + u.getLastName() + "','" + u.getEmail() +"','" + u.getPassword() + "')";
+        String sql;
 
         try {
+            sql = "insert into users (first_name, last_name, email, password) values " +
+                    "('" + u.getFirstName() +"','" + u.getLastName() + "','" + u.getEmail() +"','" + u.getPassword() + "')";
+
             Statement s = c.createStatement();
             s.execute(sql);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        try {
+            sql = "select * from users where email = ?";
+            PreparedStatement ps = c.prepareStatement(sql);
+            ps.setString(1, u.getEmail());
+
+            ResultSet rs = ps.executeQuery();
+
+            User loggedIn = null;
+            while(rs.next()){
+                loggedIn = new User(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            }
+            return loggedIn;
+        } catch (SQLException e ) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 //    /**
