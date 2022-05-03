@@ -20,12 +20,13 @@ public class UserController {
     public Handler handleRegister = (ctx) -> {
         RegisterObject ro = oMap.readValue(ctx.body(), RegisterObject.class);
 
-        User u = uServ.registerUser(ro.firstName, ro.lastName, ro.email, ro.password);
+        User u = uServ.registerUser(ro.firstName, ro.lastName, ro.email, ro.password, ro.userType);
         ctx.req.getSession().setAttribute("id", ""+u.getUserID());
         ctx.req.getSession().setAttribute("fName", ""+u.getFirstName());
         ctx.req.getSession().setAttribute("lName", ""+u.getLastName());
         ctx.req.getSession().setAttribute("email", ""+u.getEmail());
         ctx.req.getSession().setAttribute("password", ""+u.getPassword());
+        ctx.req.getSession().setAttribute("userType", ""+u.getUserType());
         ctx.status(201);
         ctx.result("Created user: " + ro.email);
     };
@@ -41,6 +42,7 @@ public class UserController {
             ctx.req.getSession().setAttribute("lName", ""+u.getLastName());
             ctx.req.getSession().setAttribute("email", ""+u.getEmail());
             ctx.req.getSession().setAttribute("password", ""+u.getPassword());
+            ctx.req.getSession().setAttribute("userType", ""+u.getUserType());
             ctx.result(oMap.writeValueAsString(u));
         } else {
             ctx.status(403);
@@ -48,11 +50,14 @@ public class UserController {
         }
     };
 
+    // doesn't work
     public Handler handleUpdateUser = (ctx) -> {
         User u = oMap.readValue(ctx.body(), User.class);
 
-        if (uServ.updateUser(u) != null) {
-            ctx.result("Updated the following user: " + oMap.writeValueAsString(u));
+        if (ctx.req.getSession().getAttribute("id") == null) {
+            ctx.result("Login before updating your information");
+        } else if (uServ.updateUser(u) != null) {
+            ctx.result(oMap.writeValueAsString(u));
         } else {
             ctx.result("User not found in the database");
         }

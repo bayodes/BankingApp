@@ -1,7 +1,6 @@
 package com.revature.controllers;
 
 import com.revature.models.Account;
-import com.revature.models.DepositObject;
 import com.revature.models.User;
 import com.revature.services.AccountService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,6 +10,14 @@ public class AccountController {
 
     private AccountService aServ;
     private ObjectMapper oMap;
+    private int userID;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    private String userType;
+
+    private User updatedUser;
 
     public AccountController() {}
 
@@ -26,17 +33,24 @@ public class AccountController {
             ctx.status(401);
             ctx.result("You must login to create an account");
         } else {
-            int userID = Integer.parseInt((String) ctx.req.getSession().getAttribute("id"));
-            String firstName = (String) ctx.req.getSession().getAttribute("fName");
-            String lastName = (String) ctx.req.getSession().getAttribute("lName");
-            String email = (String) ctx.req.getSession().getAttribute("email");
-            String password = (String) ctx.req.getSession().getAttribute("password");
+            userID = Integer.parseInt((String) ctx.req.getSession().getAttribute("id"));
+            firstName = (String) ctx.req.getSession().getAttribute("fName");
+            lastName = (String) ctx.req.getSession().getAttribute("lName");
+            email = (String) ctx.req.getSession().getAttribute("email");
+            password = (String) ctx.req.getSession().getAttribute("password");
+            userType = (String) ctx.req.getSession().getAttribute("userType");
 
-            User u = new User(userID, firstName, lastName, email, password);
+            if(userType.equalsIgnoreCase("manager")) {
+                ctx.result("Managers can't create accounts");
+            } else if (userType.equalsIgnoreCase("user")) {
+                User u = new User(userID, firstName, lastName, email, password, userType);
 
-            aServ.addAccount(u);
-            ctx.result(email + " added a new bank account");
-            ctx.req.getSession().setAttribute("hasAccount", ""+hasAccount);
+                updatedUser = aServ.addAccount(u);
+
+                ctx.result("Waiting to see if your account is approved");
+//                ctx.result(email + " added a new bank account");
+//                ctx.req.getSession().setAttribute("hasAccount", ""+hasAccount);
+            }
         }
     };
 
@@ -66,5 +80,21 @@ public class AccountController {
             aServ.withdraw(a);
             ctx.result(a.getBalance() + " added");
         }
+    };
+
+    public Handler viewAllAccounts = (ctx) -> {
+
+        System.out.println(updatedUser.getListOfAccounts().peek());
+
+        ctx.result(oMap.writeValueAsString(updatedUser.getListOfAccounts().peek()));
+    };
+
+    public Handler approveAccount = (ctx) -> {
+        aServ.approveAccount(updatedUser);
+    };
+
+    public Handler denyAccount = (ctx) -> {
+        ctx.result(oMap.writeValueAsString(updatedUser.getListOfAccounts().peek()));
+        ctx.result("Account was denied");
     };
 }

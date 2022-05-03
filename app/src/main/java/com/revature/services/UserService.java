@@ -14,10 +14,10 @@ public class UserService {
         this.uDao = uDao;
     }
 
-    public User registerUser(String firstName, String lastName, String email, String password) {
-        User register = new User(0, firstName, lastName, email, password);
+    public User registerUser(String firstName, String lastName, String email, String password, String position) {
+        User register = new User(0, firstName, lastName, email, password, position);
         User u = uDao.createUser(register);
-
+        u.setUserType(position);
         LoggingUtil.logger.info("A new user was registered");
         return u;
     }
@@ -40,6 +40,7 @@ public class UserService {
         return u;
     }
 
+    // doesn't work
     public User updateUser(User u) {
         boolean isEmpty = uDao.isEmpty(u.getEmail());
         boolean isFound = uDao.isFound(u);
@@ -63,11 +64,11 @@ public class UserService {
             LoggingUtil.logger.error("There are no users in the database. Can't delete a user that doesn't exist");
             return false;
         } else if (isFound == false) {
-            LoggingUtil.logger.error(u.getEmail() + " does not exist in the database");
+            LoggingUtil.logger.error("User with id " + u.getUserID() + " does not exist in the database");
             return false;
         } else {
             uDao.deleteUser(u);
-            LoggingUtil.logger.info(u.getEmail() + " has been deleted from the database");
+            LoggingUtil.logger.info("User with id " + u.getUserID() + " has been deleted from the database");
             return true;
         }
     }

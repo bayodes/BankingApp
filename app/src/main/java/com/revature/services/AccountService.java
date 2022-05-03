@@ -4,8 +4,7 @@ import com.revature.dao.IAccountDao;
 import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.utils.LoggingUtil;
-
-import java.util.Arrays;
+import java.util.List;
 
 public class AccountService {
 
@@ -17,12 +16,14 @@ public class AccountService {
         this.aDao = aDao;
     }
 
-    public void addAccount(User u) {
-        Account createAccount = new Account(0, 0.00, u);
-        aDao.createAccount(createAccount, u);
+    public User addAccount(User u) {
+        Account createAccount = new Account(0, 0.00, u.getUserID());
 
-        u.getListOfAccounts().add(createAccount);
-        LoggingUtil.logger.info("A new account was created");
+        u.getListOfAccounts().push(createAccount);
+
+        LoggingUtil.logger.info("Waiting to see if your account is approved");
+
+        return u;
     }
 
     public void deposit(Account a) {
@@ -41,12 +42,17 @@ public class AccountService {
 
     }
 
-    public Account viewAllAccounts() {
-        return null;
+    public List<Account> viewAllAccounts(User u) {
+
+        List<Account> listOfAccounts = aDao.readAllAccounts(u);
+
+        return listOfAccounts;
     }
 
-    public void approveAccount() {
+    public void approveAccount(User u) {
+        aDao.createAccount(u.getListOfAccounts().pop(), u);
 
+        LoggingUtil.logger.info("A new account was created");
     }
 
     public void denyAccount() {

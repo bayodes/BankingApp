@@ -14,7 +14,7 @@ public interface IAccountDao {
 
     //public void transferToAccount();
 
-    public List<Account> readAllAccounts();
+    public List<Account> readAllAccounts(User u);
 
     public User approveAccount(Account u);
 

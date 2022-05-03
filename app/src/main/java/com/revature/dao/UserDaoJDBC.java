@@ -3,7 +3,6 @@ package com.revature.dao;
 import com.revature.models.User;
 import com.revature.utils.ConnectionSingleton;
 import java.sql.*;
-import java.util.List;
 
 public class UserDaoJDBC implements IUserDao {
 
@@ -21,8 +20,9 @@ public class UserDaoJDBC implements IUserDao {
         String sql;
 
         try {
-            sql = "insert into users (first_name, last_name, email, password) values " +
-                    "('" + u.getFirstName() +"','" + u.getLastName() + "','" + u.getEmail() +"','" + u.getPassword() + "')";
+            sql = "insert into users (first_name, last_name, email, password, user_type) values " +
+                    "('" + u.getFirstName() + "','" + u.getLastName() + "','" + u.getEmail() +"','" +
+                    u.getPassword() + "','" + u.getUserType() + "')";
 
             Statement s = c.createStatement();
             s.execute(sql);
@@ -58,7 +58,8 @@ public class UserDaoJDBC implements IUserDao {
 
             User loggedIn = null;
             while(rs.next()){
-                loggedIn = new User(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+                loggedIn = new User(rs.getInt(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4), rs.getString(5), rs.getString(6));
             }
             return loggedIn;
         } catch (SQLException e) {
@@ -156,6 +157,7 @@ public class UserDaoJDBC implements IUserDao {
         String sql;
         PreparedStatement ps;
         ResultSet rs;
+        boolean isFound = true;
 
         try {
             sql = "select count(user_id) from users where user_id = ?";
@@ -165,14 +167,16 @@ public class UserDaoJDBC implements IUserDao {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                if (rs.getInt("count") == 0) {
-                    return false;
+                if (rs.getInt("count") == 1) {
+                    isFound = true;
+                } else {
+                    isFound = false;
                 }
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return true;
+        return isFound;
     }
 }

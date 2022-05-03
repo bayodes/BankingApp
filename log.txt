@@ -213,3 +213,78 @@
 2022-05-02 16:52:48 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
 2022-05-02 16:52:51 INFO  LoggingUtil:25 - A new account was created
 2022-05-02 16:53:22 INFO  LoggingUtil:31 - Money was just added your account
+2022-05-02 19:23:28 INFO  LoggingUtil:21 - A new user was registered
+2022-05-02 19:23:32 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 19:24:01 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-02 19:24:09 INFO  LoggingUtil:25 - A new account was created
+2022-05-02 19:53:44 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 06:14:44 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 06:37:00 ERROR LoggingUtil:51 - morty.smith@mail.com does not exist in the database
+2022-05-03 06:41:07 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 06:41:11 ERROR LoggingUtil:51 - morty.smith@mail.com does not exist in the database
+2022-05-03 06:44:24 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 06:44:39 ERROR LoggingUtil:51 - morty.smith@mail.com does not exist in the database
+2022-05-03 06:48:24 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 06:48:28 ERROR LoggingUtil:51 - morty.smith@mail.com does not exist in the database
+2022-05-03 07:03:01 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:03:03 ERROR LoggingUtil:51 - morty.smith@mail.com does not exist in the database
+2022-05-03 07:05:42 INFO  LoggingUtil:70 - null has been deleted from the database
+2022-05-03 07:35:33 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 07:35:43 INFO  LoggingUtil:22 - Waiting to see if your account is approved
+2022-05-03 07:37:56 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:38:51 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 07:39:02 INFO  LoggingUtil:22 - Waiting to see if your account is approved
+2022-05-03 07:40:22 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:41:42 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:42:41 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:44:05 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:47:05 INFO  LoggingUtil:22 - A new user was registered
+2022-05-03 07:51:09 INFO  LoggingUtil:34 - User morty.smith@mail.com logged in successfully
+2022-05-03 07:55:02 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 08:02:26 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 08:02:59 ERROR LoggingUtil:37 - Login attempt failed
+2022-05-03 08:07:50 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 08:09:57 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 08:11:18 INFO  LoggingUtil:33 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:12:42 INFO  LoggingUtil:33 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:17:00 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:17:05 INFO  LoggingUtil:22 - Waiting to see if your account is approved
+2022-05-03 08:18:16 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:18:20 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-03 08:19:08 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:20:03 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:20:51 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:21:13 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:21:15 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:22:27 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:22:30 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:23:56 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:24:11 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:28:06 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:28:10 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:28:33 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:28:36 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:29:31 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:29:32 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:30:51 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:30:58 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:42:24 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:42:28 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 08:43:59 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 08:44:01 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 09:26:44 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 09:26:46 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 09:32:07 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 09:32:10 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 09:37:15 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 09:37:17 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-03 09:48:36 ERROR LoggingUtil:33 - There are no users in the database. Register a user
+2022-05-03 09:48:43 INFO  LoggingUtil:21 - A new user was registered
+2022-05-03 09:49:03 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-03 09:50:28 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 09:50:32 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-03 09:51:14 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 09:51:16 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-03 10:00:25 INFO  LoggingUtil:31 - User morty.smith@mail.com logged in successfully
+2022-05-03 10:00:27 INFO  LoggingUtil:24 - Waiting to see if your account is approved
+2022-05-03 10:00:37 INFO  LoggingUtil:55 - A new account was created

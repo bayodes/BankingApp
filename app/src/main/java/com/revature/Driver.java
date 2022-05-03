@@ -44,6 +44,13 @@ public class Driver {
                 put("/withdraw", aCon.handleWithdraw);
 //                delete("/{id}", uCon.handleDeleteUser);
             });
+
+            path("manager", () -> {
+                get("/view", aCon.viewAllAccounts);
+                post("/approve", aCon.approveAccount);
+                put("/deny", aCon.denyAccount);
+//                delete("/{id}", uCon.handleDeleteUser);
+            });
         });
 
         server.start(8000);

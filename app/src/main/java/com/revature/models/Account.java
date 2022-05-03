@@ -4,7 +4,7 @@ public class Account {
 
     private int accountID;
     private double balance;
-    private User userAccount;
+    private int userFK;
 
     public Account() {}
 
@@ -13,10 +13,10 @@ public class Account {
         this.balance = balance;
     }
 
-    public Account(int accountID, double balance, User userAccount) {
+    public Account(int accountID, double balance, int userFK) {
         this.accountID = accountID;
         this.balance = balance;
-        this.userAccount = userAccount;
+        this.userFK = userFK;
     }
 
     public int getAccountID() {
@@ -35,20 +35,20 @@ public class Account {
         this.balance = balance;
     }
 
-    public User getUserAccount() {
-        return userAccount;
+    public int getUserFK() {
+        return userFK;
     }
 
-    public void setUserAccount(User userAccount) {
-        this.userAccount = userAccount;
+    public void setUserFK(int userFK) {
+        this.userFK = userFK;
     }
 
     @Override
     public String toString() {
-        return "Account{" +
-                "accountID=" + accountID +
-                ", balance=" + balance +
-                ", userAccount=" + userAccount +
-                '}';
+        return "Account\t{\n" +
+                "accountID = " + accountID +
+                ",\nbalance = " + balance +
+                ",\nuserFK = " + userFK +
+                "\n}";
     }
 }

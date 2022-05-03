@@ -2,6 +2,7 @@ package com.revature.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class User {
 
@@ -10,8 +11,8 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private List<Account> listOfAccounts;
-    private List<User> listOfUsers;
+    private Stack<Account> listOfAccounts;
+    private String userType;
 
     public User(){}
 
@@ -21,19 +22,28 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.listOfAccounts = new ArrayList<>();
-        this.listOfUsers = new ArrayList<>();
+        this.listOfAccounts = new Stack<>();
+    }
+
+    public User(int userID, String firstName, String lastName, String email, String password, String userType) {
+        this.userID = userID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.listOfAccounts = new Stack<>();
+        this.userType = userType;
     }
 
     public User(int userID, String firstName, String lastName, String email,
-                String password, List<Account> listOfAccounts, List<User> listOfUsers) {
+                String password, Stack<Account> listOfAccounts, String userType) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.listOfAccounts = listOfAccounts;
-        this.listOfUsers = listOfUsers;
+        this.userType = userType;
     }
 
     public int getUserID() {
@@ -76,32 +86,33 @@ public class User {
         this.password = password;
     }
 
-    public List<Account> getListOfAccounts() {
+    public Stack<Account> getListOfAccounts() {
         return listOfAccounts;
     }
 
-    public void setListOfAccounts(List<Account> listOfAccounts) {
+    public void setListOfAccounts(Stack<Account> listOfAccounts) {
+
         this.listOfAccounts = listOfAccounts;
     }
 
-    public List<User> getListOfUsers() {
-        return listOfUsers;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setListOfUsers(List<User> listOfUsers) {
-        this.listOfUsers = listOfUsers;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "userID=" + userID +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", listOfAccounts=" + listOfAccounts +
-                ", listOfUsers=" + listOfUsers +
+        return "User {" +
+                "userID =" + userID +
+                ", firstName ='" + firstName + '\'' +
+                ", lastName ='" + lastName + '\'' +
+                ", email ='" + email + '\'' +
+                ", password ='" + password + '\'' +
+                ", listOfAccounts =" + listOfAccounts +
+                ", userType ='" + userType + '\'' +
                 '}';
     }
 }
