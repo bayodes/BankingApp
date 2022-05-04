@@ -3,17 +3,13 @@ package com.revature.dao;
 import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.utils.ConnectionSingleton;
-
 import java.sql.*;
-import java.util.List;
+import java.util.Stack;
 
 public class AccountDaoJDBC implements IAccountDao{
 
     private ConnectionSingleton cs = ConnectionSingleton.getConnectionSingleton();
 
-    /**
-     * @param a
-     */
     @Override
     public void createAccount(Account a, User u) {
         Connection c = cs.getConnection();
@@ -30,52 +26,46 @@ public class AccountDaoJDBC implements IAccountDao{
         }
     }
 
-    /**
-     *
-     */
     @Override
-    public void addToAccount(Account a) {
+    public Account addToAccount(Account a, double amount) {
         Connection c = cs.getConnection();
-        //double amount = a.getBalance();
-
-        String sql = "update accounts set balance = ? where users_fk = ?";
 
         try {
+            String sql = "update accounts set balance = ? where user_fk = ?";
+
             PreparedStatement ps = c.prepareStatement(sql);
-            ps.setDouble(1, a.getBalance());
+            ps.setDouble(1, amount);
             ps.setInt(2, a.getAccountID());
 
             ps.executeQuery();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        return a;
     }
 
-    /**
-     *
-     */
     @Override
-    public void subtractFromAccount(Account a) {
+    public Account subtractFromAccount(Account a, double amount) {
         Connection c = cs.getConnection();
 
-        String sql = "update accounts set balance = ? where account_id = ?";
-
         try {
+            String sql = "update accounts set balance = ? where account_id = ?";
+
             PreparedStatement ps = c.prepareStatement(sql);
-            ps.setDouble(1, a.getBalance());
+            ps.setDouble(1, amount);
             ps.setInt(2, a.getAccountID());
 
             ps.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        return a;
     }
 
-    /**
-     * @return
-     */
     @Override
-    public List<Account> readAllAccounts(User u) {
+    public Stack<Account> readAllAccounts(User u) {
         Connection c = cs.getConnection();
         PreparedStatement ps;
         ResultSet rs;
@@ -92,40 +82,69 @@ public class AccountDaoJDBC implements IAccountDao{
 
             while(rs.next()){
                 a = new Account(rs.getInt(1), rs.getDouble(2));
-                u.getListOfAccounts().add(a);
+                u.getStackOfAccounts().add(a);
                 System.out.println(a);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return u.getListOfAccounts();
+        return u.getStackOfAccounts();
     }
 
-    /**
-     * @param u
-     * @return
-     */
-    @Override
-    public User approveAccount(Account u) {
-
-        return null;
-    }
-
-    /**
-     * @param u
-     * @return
-     */
-    @Override
-    public User denyAccount(Account u) {
-        return null;
-    }
-
-    /**
-     * @param u
-     */
     @Override
     public void closeAccount(Account u) {
 
+    }
+
+    @Override
+    public boolean isEmpty(int accountID) {
+        Connection c = cs.getConnection();
+        String sql;
+        PreparedStatement ps;
+        ResultSet rs;
+
+        try {
+            sql = "select count(*) from users";
+            ps = c.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                if (rs.getInt("count") == 0) {
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean isFound(Account a) {
+        Connection c = cs.getConnection();
+        String sql;
+        PreparedStatement ps;
+        ResultSet rs;
+        boolean isFound = true;
+
+        try {
+            sql = "select count(user_id) from users where user_id = ?";
+            ps = c.prepareStatement(sql);
+            ps.setInt(1, a.getAccountID());
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                if (rs.getInt("count") == 1) {
+                    isFound = true;
+                } else {
+                    isFound = false;
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isFound;
     }
 }

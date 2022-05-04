@@ -8,19 +8,12 @@ public class UserDaoJDBC implements IUserDao {
 
     private ConnectionSingleton cs = ConnectionSingleton.getConnectionSingleton();
 
-    /**
-     * Registering a new user
-     * @param u the user object used to place into the database
-     */
     @Override
     public User createUser(User u) {
-        //To create a user, we must get our connection, create a statement, and execute said statement
         Connection c = cs.getConnection();
 
-        String sql;
-
         try {
-            sql = "insert into users (first_name, last_name, email, password, user_type) values " +
+            String sql = "insert into users (first_name, last_name, email, password, user_type) values " +
                     "('" + u.getFirstName() + "','" + u.getLastName() + "','" + u.getEmail() +"','" +
                     u.getPassword() + "','" + u.getUserType() + "')";
 
@@ -32,29 +25,20 @@ public class UserDaoJDBC implements IUserDao {
         }
 
         // set the user to be logged in
-        User user = readUserByEmail(u.getEmail());
-        return user;
+        u = readUserByEmail(u.getEmail());
+        return u;
     }
 
-    /**
-     * Logging In
-     * @param email the user's email, which acts as the unique identifier
-     * @return the database instance of the user's email
-     */
     @Override
     public User readUserByEmail(String email) {
-
         Connection c = cs.getConnection();
-        String sql;
-        PreparedStatement ps;
-        ResultSet rs;
 
         try {
-            sql = "select * from users where email = ?";
-            ps = c.prepareStatement(sql);
+            String sql = "select * from users where email = ?";
+            PreparedStatement ps = c.prepareStatement(sql);
             ps.setString(1, email);
 
-            rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
             User loggedIn = null;
             while(rs.next()){
@@ -69,31 +53,23 @@ public class UserDaoJDBC implements IUserDao {
         return null;
     }
 
-    /**
-     * @param u the user object that will be updated
-     * @return the updated user object
-     */
     @Override
-    public User updateUser(User u) {
+    public User updateUser(String firstName, String lastName, String password, User u) {
         Connection c = cs.getConnection();
-        PreparedStatement ps;
-        String sql;
 
         try {
-            sql = "update users " +
+            String sql = "update users " +
                     "set first_name = ?, " +
                     "last_name = ?, " +
-                    "email = ?, " +
                     "password = ? " +
-                    "where user_id = ?";
+                    "where email = ?";
 
-            ps = c.prepareStatement(sql);
+            PreparedStatement ps = c.prepareStatement(sql);
 
-            ps.setString(1, u.getFirstName());
-            ps.setString(2, u.getLastName());
-            ps.setString(3, u.getEmail());
-            ps.setString(4, u.getPassword());
-            ps.setInt(5, u.getUserID());
+            ps.setString(1, firstName);
+            ps.setString(2, lastName);
+            ps.setString(3, password);
+            ps.setString(4, u.getEmail());
 
             ps.execute();
         } catch (SQLException e) {
@@ -102,19 +78,13 @@ public class UserDaoJDBC implements IUserDao {
         return u;
     }
 
-    /**
-     * @param u the user object that will be deleted
-     */
     @Override
-    public boolean deleteUser(User u) {
+    public void deleteUser(User u) {
         Connection c = cs.getConnection();
-        String sql;
-        PreparedStatement ps;
-        ResultSet rs;
 
         try {
-            sql = "delete from users where user_id = ?";
-            ps = c.prepareStatement(sql);
+            String sql = "delete from users where user_id = ?";
+            PreparedStatement ps = c.prepareStatement(sql);
             ps.setInt(1, u.getUserID());
 
             ps.execute();
@@ -122,24 +92,16 @@ public class UserDaoJDBC implements IUserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return true;
     }
 
-    /**
-     * @param email
-     * @return
-     */
     @Override
-    public boolean isEmpty(String email) {
+    public boolean isEmpty() {
         Connection c = cs.getConnection();
-        String sql;
-        PreparedStatement ps;
-        ResultSet rs;
 
         try {
-            sql = "select count(*) from users";
-            ps = c.prepareStatement(sql);
-            rs = ps.executeQuery();
+            String sql = "select count(*) from users";
+            PreparedStatement ps = c.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 if (rs.getInt("count") == 0) {
@@ -154,29 +116,22 @@ public class UserDaoJDBC implements IUserDao {
 
     public boolean isFound(User u) {
         Connection c = cs.getConnection();
-        String sql;
-        PreparedStatement ps;
-        ResultSet rs;
-        boolean isFound = true;
 
         try {
-            sql = "select count(user_id) from users where user_id = ?";
-            ps = c.prepareStatement(sql);
+            String sql = "select count(user_id) from users where user_id = ?";
+            PreparedStatement ps = c.prepareStatement(sql);
             ps.setInt(1, u.getUserID());
 
-            rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                if (rs.getInt("count") == 1) {
-                    isFound = true;
-                } else {
-                    isFound = false;
+                if (rs.getInt("count") == 0) {
+                    return false;
                 }
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return isFound;
+        return true;
     }
 }

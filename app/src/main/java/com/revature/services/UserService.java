@@ -16,15 +16,16 @@ public class UserService {
 
     public User registerUser(String firstName, String lastName, String email, String password, String position) {
         User register = new User(0, firstName, lastName, email, password, position);
+
         User u = uDao.createUser(register);
-        u.setUserType(position);
-        LoggingUtil.logger.info("A new user was registered");
+
+        LoggingUtil.logger.info("Registered user " + u.getEmail());
         return u;
     }
 
     public User loginUser(String email, String password) {
 
-        boolean isEmpty = uDao.isEmpty(email);
+        boolean isEmpty = uDao.isEmpty();
         User u = uDao.readUserByEmail(email);
 
         if (u != null && password.equals(u.getPassword())) {
@@ -40,36 +41,41 @@ public class UserService {
         return u;
     }
 
-    // doesn't work
-    public User updateUser(User u) {
-        boolean isEmpty = uDao.isEmpty(u.getEmail());
+    public User updateUser(String firstName, String lastName, String password, User u) {
+        boolean isEmpty = uDao.isEmpty();
         boolean isFound = uDao.isFound(u);
-        User user = uDao.updateUser(u);
+        User user = null;
 
         if (isEmpty == true) {
             LoggingUtil.logger.error("There are no users in the database. Register a user before updating their information");
         } else if (isFound == false) {
             LoggingUtil.logger.error(u.getEmail() + " does not exist in the database");
         } else {
-            LoggingUtil.logger.info(u.getUserID() + " has updated their information");
+            user = uDao.updateUser(firstName, lastName, password, u);
+            user.setFirstName(firstName);
+            user.setFirstName(lastName);
+            user.setFirstName(password);
+            LoggingUtil.logger.info(u.getEmail() + " has updated their information");
         }
         return user;
     }
 
-    public boolean deleteUser(User u) {
-        boolean isEmpty = uDao.isEmpty(u.getEmail());
-        boolean isFound = uDao.isFound(u);
+    public void deleteUser(User user) {
+        String email = user.getEmail();
+        boolean isEmpty = uDao.isEmpty();
+        boolean isFound = uDao.isFound(user);
 
         if (isEmpty == true) {
             LoggingUtil.logger.error("There are no users in the database. Can't delete a user that doesn't exist");
-            return false;
         } else if (isFound == false) {
-            LoggingUtil.logger.error("User with id " + u.getUserID() + " does not exist in the database");
-            return false;
+            LoggingUtil.logger.error("User with id " + user.getUserID() + " does not exist in the database");
         } else {
-            uDao.deleteUser(u);
-            LoggingUtil.logger.info("User with id " + u.getUserID() + " has been deleted from the database");
-            return true;
+            uDao.deleteUser(user);
+            LoggingUtil.logger.info(email + " has been deleted from the database");
         }
+    }
+
+    public void logOut(String email) {
+        LoggingUtil.logger.info(email + " has logged out");
     }
 }

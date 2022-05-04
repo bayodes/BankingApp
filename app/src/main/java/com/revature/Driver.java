@@ -36,20 +36,20 @@ public class Driver {
                 post("/login", uCon.handleLogin);
                 put("/", uCon.handleUpdateUser);
                 delete("/{id}", uCon.handleDeleteUser);
+                post("/logout", uCon.handleLogout);
             });
 
             path("accounts", () -> {
                 post("/create", aCon.handleCreateAccount);
                 put("/deposit", aCon.handleDeposit);
                 put("/withdraw", aCon.handleWithdraw);
-//                delete("/{id}", uCon.handleDeleteUser);
             });
 
             path("manager", () -> {
                 get("/view", aCon.viewAllAccounts);
                 post("/approve", aCon.approveAccount);
                 put("/deny", aCon.denyAccount);
-//                delete("/{id}", uCon.handleDeleteUser);
+                delete("/{id}", aCon.closeAccount);
             });
         });
 

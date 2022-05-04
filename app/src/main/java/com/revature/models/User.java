@@ -1,7 +1,5 @@
 package com.revature.models;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class User {
@@ -11,7 +9,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private Stack<Account> listOfAccounts;
+    private Stack stackOfAccounts;
     private String userType;
 
     public User(){}
@@ -22,7 +20,7 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.listOfAccounts = new Stack<>();
+        this.stackOfAccounts = new Stack(); // MAKE SURE NOT INIT NEW STACK
     }
 
     public User(int userID, String firstName, String lastName, String email, String password, String userType) {
@@ -31,18 +29,18 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.listOfAccounts = new Stack<>();
+        this.stackOfAccounts = new Stack();
         this.userType = userType;
     }
 
     public User(int userID, String firstName, String lastName, String email,
-                String password, Stack<Account> listOfAccounts, String userType) {
+                String password, Stack stackOfAccounts, String userType) {
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.listOfAccounts = listOfAccounts;
+        this.stackOfAccounts = stackOfAccounts;
         this.userType = userType;
     }
 
@@ -86,13 +84,13 @@ public class User {
         this.password = password;
     }
 
-    public Stack<Account> getListOfAccounts() {
-        return listOfAccounts;
+    public Stack getStackOfAccounts() {
+        return stackOfAccounts;
     }
 
-    public void setListOfAccounts(Stack<Account> listOfAccounts) {
+    public void setStackOfAccounts(Stack stackOfAccounts) {
 
-        this.listOfAccounts = listOfAccounts;
+        this.stackOfAccounts = stackOfAccounts;
     }
 
     public String getUserType() {
@@ -106,12 +104,12 @@ public class User {
     @Override
     public String toString() {
         return "User {" +
-                "userID =" + userID +
+                "userID = " + userID +
                 ", firstName ='" + firstName + '\'' +
                 ", lastName ='" + lastName + '\'' +
                 ", email ='" + email + '\'' +
                 ", password ='" + password + '\'' +
-                ", listOfAccounts =" + listOfAccounts +
+                ", stackOfAccounts =" + stackOfAccounts +
                 ", userType ='" + userType + '\'' +
                 '}';
     }
