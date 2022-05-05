@@ -1,9 +1,6 @@
 package com.revature.controllers;
 
-import com.revature.models.LoginObject;
-import com.revature.models.RegisterObject;
-import com.revature.models.UpdateUserObject;
-import com.revature.models.User;
+import com.revature.models.*;
 import com.revature.services.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.http.Handler;
@@ -13,14 +10,21 @@ public class UserController {
     private UserService uServ;
     private ObjectMapper oMap;
     private User u;
+    private Account a;
 
     public UserController(UserService uServ){
         this.uServ = uServ;
         this.oMap = new ObjectMapper();
     }
 
+    public UserController(Account a) {
+        this.a = a;
+    }
+
     public Handler handleRegister = (ctx) -> {
         RegisterObject ro = oMap.readValue(ctx.body(), RegisterObject.class);
+        String m = "manager";
+        String user = "user";
 
         u = uServ.registerUser(ro.firstName, ro.lastName, ro.email, ro.password, ro.userType);
 
@@ -30,22 +34,24 @@ public class UserController {
         ctx.req.getSession().setAttribute("email", ""+u.getEmail());
         ctx.req.getSession().setAttribute("password", ""+u.getPassword());
         ctx.req.getSession().setAttribute("userType", ""+u.getUserType());
+        ctx.req.getSession().setAttribute("m", ""+m);
+        ctx.req.getSession().setAttribute("u", ""+user);
 
         ctx.result("Registered user: " + u.getEmail());
     };
 
     public Handler handleLogin = (ctx) -> {
         LoginObject lo = oMap.readValue(ctx.body(), LoginObject.class);
+        int userID = Integer.parseInt((String) ctx.req.getSession().getAttribute("id"));
 
         u = uServ.loginUser(lo.email, lo.password);
+        ctx.req.getSession().setAttribute("id", ""+u.getUserID());
+        if (u != null && u.getUserType().equalsIgnoreCase("user")) {
 
-        if (u != null) {
-            ctx.req.getSession().setAttribute("id", ""+u.getUserID());
-            ctx.req.getSession().setAttribute("fName", ""+u.getFirstName());
-            ctx.req.getSession().setAttribute("lName", ""+u.getLastName());
-            ctx.req.getSession().setAttribute("email", ""+u.getEmail());
-            ctx.req.getSession().setAttribute("password", ""+u.getPassword());
-            ctx.req.getSession().setAttribute("userType", ""+u.getUserType());
+            //u.getStackOfAccounts().push(a);
+            ctx.result(oMap.writeValueAsString(u));
+        } else if(u != null && u.getUserType().equalsIgnoreCase("manager")) {
+            u.getStackOfAccounts().push(a);
             ctx.result(oMap.writeValueAsString(u));
         } else {
             ctx.status(403);

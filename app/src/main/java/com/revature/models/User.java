@@ -14,14 +14,14 @@ public class User {
 
     public User(){}
 
-    public User(int userID, String firstName, String lastName, String email, String password) {
-        this.userID = userID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.stackOfAccounts = new Stack(); // MAKE SURE NOT INIT NEW STACK
-    }
+//    public User(int userID, String firstName, String lastName, String email, String password) {
+//        this.userID = userID;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.email = email;
+//        this.password = password;
+//        this.stackOfAccounts = new Stack(); // MAKE SURE NOT INIT NEW STACK
+//    }
 
     public User(int userID, String firstName, String lastName, String email, String password, String userType) {
         this.userID = userID;

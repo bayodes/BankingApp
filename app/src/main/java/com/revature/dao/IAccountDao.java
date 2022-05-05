@@ -7,19 +7,21 @@ import java.util.Stack;
 
 public interface IAccountDao {
 
-    public void createAccount(Account a, User u);
+    public Account createAccount(Account a, User u);
 
-    public Account addToAccount(Account a, double amount);
+    public void addToAccount(Account a, double amount);
 
-    public Account subtractFromAccount(Account a, double amount);
+    public void subtractFromAccount(Account a, double amount);
 
-    //public void transferToAccount();
+    public double[] transferToAccount(int accountOne, int accountTwo, double amount);
+
+//    public void inputTransfer(double[] balances, double amount);
 
     public List<Account> readAllAccounts(User u);
 
-    public void closeAccount(Account u);
+    public void closeAccount(Account a);
 
-    public boolean isEmpty(int accountID);
+    public boolean isEmpty();
 
     public boolean isFound(Account a);
 }

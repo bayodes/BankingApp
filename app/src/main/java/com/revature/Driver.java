@@ -43,6 +43,7 @@ public class Driver {
                 post("/create", aCon.handleCreateAccount);
                 put("/deposit", aCon.handleDeposit);
                 put("/withdraw", aCon.handleWithdraw);
+                put("/transfer", aCon.handleTransfer);
             });
 
             path("manager", () -> {

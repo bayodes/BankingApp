@@ -363,3 +363,272 @@
 2022-05-04 07:15:35 INFO  LoggingUtil:61 - A new account was created
 2022-05-04 07:16:12 INFO  LoggingUtil:80 - rick.sanchez@mail.com has logged out
 2022-05-04 07:16:19 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 12:22:50 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 12:23:12 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 12:23:25 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 12:23:43 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 12:24:40 INFO  LoggingUtil:66 - A new account was created
+2022-05-04 12:25:19 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 12:25:31 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 12:49:40 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 13:06:16 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 13:08:05 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 13:58:50 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 13:59:25 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 13:59:36 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 13:59:55 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 14:00:27 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 14:00:54 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 14:01:01 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 17:27:33 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 17:27:39 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 17:27:54 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 17:28:15 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 17:37:06 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 17:42:51 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 17:43:53 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 18:19:04 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 18:19:09 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 18:19:14 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 18:19:26 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 18:19:39 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 18:19:46 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 18:19:54 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 18:24:18 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 18:24:28 INFO  LoggingUtil:26 - Waiting to see if your account is approved
+2022-05-04 18:26:01 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 18:26:03 INFO  LoggingUtil:27 - Waiting to see if your account is approved
+2022-05-04 18:27:14 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 18:27:27 INFO  LoggingUtil:62 - A new account was created
+2022-05-04 18:32:31 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 18:32:46 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 18:33:06 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 18:33:20 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 19:01:00 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 19:01:15 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 19:01:29 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 19:01:46 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 19:02:02 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 19:02:19 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 19:02:22 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:04:38 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:05:31 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:07:39 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:09:59 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 19:10:03 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 19:10:13 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 19:10:24 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 19:10:46 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 19:11:28 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 19:11:34 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:13:41 INFO  LoggingUtil:35 - Money was just added your account
+2022-05-04 19:14:14 INFO  LoggingUtil:35 - Money was just added your account
+2022-05-04 19:14:32 INFO  LoggingUtil:35 - Money was just added your account
+2022-05-04 19:22:18 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:24:29 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 19:24:35 INFO  LoggingUtil:25 - Waiting to see if your account is approved
+2022-05-04 19:24:44 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 19:24:56 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 19:25:18 INFO  LoggingUtil:59 - A new account was created
+2022-05-04 19:25:27 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 19:25:40 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 19:25:46 INFO  LoggingUtil:35 - Money was just added your account
+2022-05-04 19:26:30 INFO  LoggingUtil:43 - Money was just taken out of your account
+2022-05-04 20:19:02 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-04 20:19:15 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-04 20:19:28 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 20:19:43 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-04 20:20:07 INFO  LoggingUtil:56 - A new account was created
+2022-05-04 20:20:28 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-04 20:20:38 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 20:21:20 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-04 20:22:43 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-04 20:22:59 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-04 20:26:19 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 20:27:34 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-04 20:27:43 INFO  LoggingUtil:71 - User with id 1 has been deleted from the database
+2022-05-04 20:28:28 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-04 20:28:33 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-04 20:41:35 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-04 20:41:40 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:11:01 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:11:08 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:11:32 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 06:11:46 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 06:11:56 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 06:12:01 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:12:12 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 06:12:22 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 06:12:33 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 06:19:16 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:19:29 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:21:44 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:21:53 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:23:13 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:23:15 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:38:52 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:39:02 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:39:06 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 06:39:19 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 06:39:42 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 06:39:47 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 06:39:52 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:45:18 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:45:21 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:45:24 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 06:45:26 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:49:42 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:49:45 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:49:49 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 06:49:58 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 06:50:07 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 06:50:13 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 06:50:17 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:55:41 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:55:45 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:55:59 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 06:56:08 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 06:56:13 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 06:56:17 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 06:58:29 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 06:58:33 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 06:58:39 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 06:58:49 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 06:59:00 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 06:59:05 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 06:59:09 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 07:05:49 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 07:08:23 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 07:09:23 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 07:09:53 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 07:09:59 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 07:10:14 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 07:10:27 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 07:10:32 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 07:10:45 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 07:14:57 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 07:15:01 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 07:15:04 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 07:15:14 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 07:15:52 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 07:15:57 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 07:16:01 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 07:17:01 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 07:17:06 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 07:17:13 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 07:17:19 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 07:17:27 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 07:17:43 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 07:17:51 INFO  LoggingUtil:56 - A new account was created
+2022-05-05 08:43:07 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 08:43:17 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:43:21 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 08:43:36 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 08:43:48 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 08:43:53 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 08:45:14 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 08:45:20 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:45:29 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 08:45:46 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 08:45:54 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 08:45:59 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 08:46:08 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 08:46:19 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 08:46:26 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:46:31 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 08:46:49 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 08:46:53 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 08:48:16 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 08:48:20 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:48:23 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 08:48:33 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 08:48:36 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 08:48:39 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 08:49:04 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 08:49:19 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 08:49:27 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 08:49:33 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:49:38 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 08:49:51 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 08:49:55 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 08:51:23 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 08:59:03 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 08:59:09 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 08:59:12 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 08:59:23 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 08:59:39 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 08:59:51 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 08:59:55 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 09:00:17 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 09:00:24 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 09:00:36 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 09:00:45 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 09:00:48 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 09:01:00 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 09:01:05 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 09:01:13 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 09:01:27 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 09:13:19 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 09:13:37 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 09:13:46 INFO  LoggingUtil:58 - morty.smith@mail.com has updated their information
+2022-05-05 09:13:51 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 09:14:05 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 09:14:13 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 09:14:17 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 09:14:22 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 09:14:40 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 09:15:02 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 09:15:09 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 09:15:14 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 09:15:34 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 09:15:41 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 09:15:55 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 09:16:01 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 09:16:11 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 09:16:25 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 10:04:13 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 10:04:19 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 10:04:23 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 10:04:33 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 10:04:44 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 10:05:04 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 10:05:06 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 10:05:22 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 10:05:29 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 10:06:17 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 10:06:38 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 10:06:45 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 10:06:53 INFO  LoggingUtil:58 - morty.smith@mail.com has updated their information
+2022-05-05 10:07:05 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 10:07:20 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 10:11:05 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 10:11:14 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 10:11:26 INFO  LoggingUtil:58 - morty.smith@mail.com has updated their information
+2022-05-05 10:11:30 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 10:11:43 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 10:11:58 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 10:12:03 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 10:12:16 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 10:12:33 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 10:12:43 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 10:12:51 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 10:12:58 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 10:13:01 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 10:13:11 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 10:13:20 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 10:13:23 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 10:13:33 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 11:32:06 INFO  LoggingUtil:22 - Registered user morty.smith@mail.com
+2022-05-05 11:32:14 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 11:32:21 INFO  LoggingUtil:79 - morty.smith@mail.com has logged out
+2022-05-05 11:32:32 INFO  LoggingUtil:22 - Registered user rick.sanchez@mail.com
+2022-05-05 11:32:46 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 11:32:53 INFO  LoggingUtil:79 - rick.sanchez@mail.com has logged out
+2022-05-05 11:33:06 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully
+2022-05-05 11:33:19 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 11:33:27 INFO  LoggingUtil:33 - Money was just added your account
+2022-05-05 11:33:35 INFO  LoggingUtil:42 - Money was just taken out of your account
+2022-05-05 11:33:47 INFO  LoggingUtil:23 - Waiting to see if your account is approved
+2022-05-05 11:34:04 INFO  LoggingUtil:32 - User rick.sanchez@mail.com logged in successfully
+2022-05-05 11:34:07 INFO  LoggingUtil:59 - A new account was created
+2022-05-05 11:34:22 INFO  LoggingUtil:32 - User morty.smith@mail.com logged in successfully

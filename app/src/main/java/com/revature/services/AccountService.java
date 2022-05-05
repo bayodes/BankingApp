@@ -4,8 +4,6 @@ import com.revature.dao.IAccountDao;
 import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.utils.LoggingUtil;
-import java.util.List;
-import java.util.Stack;
 
 public class AccountService {
 
@@ -27,59 +25,57 @@ public class AccountService {
         return u;
     }
 
-    public Account deposit(Account a, double amount) {
-        Account account = null;
+    public void deposit(Account a, double newBalance) {
+        aDao.addToAccount(a, newBalance);
 
-        account = aDao.addToAccount(a, amount);
-        //account.setBalance(amount);
+        a.setBalance(newBalance);
+
         LoggingUtil.logger.info("Money was just added your account");
-
-        return account;
     }
 
-    public Account withdraw(Account a, double amount) {
-        Account account = null;
+    public void withdraw(Account a, double newBalance) {
 
-        account = aDao.subtractFromAccount(a, amount);
-        //account.setBalance(amount);
+        aDao.subtractFromAccount(a, newBalance);
+
+        a.setBalance(newBalance);
+
         LoggingUtil.logger.info("Money was just taken out of your account");
-
-        return account;
     }
 
-    public void transferMoney(int amount, int balance) {
+    public double[] transferMoney(int accountIdFrom, int accountIdTo, double amount) {
+        double[] balances;
 
+        balances = aDao.transferToAccount(accountIdFrom, accountIdTo, amount);
+        return balances;
     }
 
-    public List<Account> viewAllAccounts(User u) {
-
-        return null;
-    }
-
-    public void approveAccount(User u) {
+    public Account approveAccount(User u) {
         Account a = (Account) u.getStackOfAccounts().pop();
 
-        u.getStackOfAccounts().push(a);
+        Account account = aDao.createAccount(a, u);
 
-        aDao.createAccount(a, u);
+        u.getStackOfAccounts().push(account);
 
         LoggingUtil.logger.info("A new account was created");
+
+        return account;
     }
 
-    public boolean closeAccount(Account a) {
-        boolean isEmpty = aDao.isEmpty(a.getAccountID());
+    public void closeAccount(Account a) {
+        boolean isEmpty = aDao.isEmpty();
         boolean isFound = aDao.isFound(a);
 
         if (isEmpty == true) {
-            LoggingUtil.logger.error("There are no users in the database. Can't delete a user that doesn't exist");
-            return false;
+            LoggingUtil.logger.error("There are no accounts in the database. Can't delete an account that doesn't exist");
         } else if (isFound == false) {
             LoggingUtil.logger.error("User with id " + a.getAccountID() + " does not exist in the database");
-            return false;
         } else {
             aDao.closeAccount(a);
             LoggingUtil.logger.info("User with id " + a.getAccountID() + " has been deleted from the database");
-            return true;
         }
     }
+
+//    public void inputTransferTable(double[] balances, double amount) {
+//        aDao.inputTransfer(balances, amount);
+//    }
 }
