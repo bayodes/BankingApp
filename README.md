@@ -1,17 +1,16 @@
-# Project: Banking Application
+# Banking Application
 
 ## Project Description:
 
-Leveraging Java 8, create a Restful API for the RevatureBank. You get to choose the exact functionality of the banking API, however it must comply with all of the functional requirements below.
+Leveraging Java 8, I created a Restful API for a bank.
 
 ## Requirements:
 
-Technologies that MUST be used:
+Technologies used:
 
 -   Java 8
 -   Javalin to handle HTTP requests
 -   JDBC for data connectivity
--   JUnit for unit testing
 -   Log4j for logging
 -   PostgreSQL for data persistence
 -   Postman to display the functionality of your end product
@@ -62,21 +61,6 @@ Design Requirements:
         -   Service layer
 -   The application should have at least 70% test coverage of the service layer
 -   The user interactions with the application will be simulated via HTTP messaging through Postman
-
-# Evaluation:
-
-The project will be evaluated out of 100 points split between two main catagories: 75 points for the functionality and design of your project and 30 points for the presentation of your project during the project showcase. The evaluation will be further subdivided as follows:
-
-**Project Score(75 points):**
-
--   15 points: Ability to persist User information/objects in the database then retrieve it when attempting to login
--   10 points: Ability to persist Account information/objects in the database then retreive the information when needed
--   15 points: Ability to update Account information in the database, and persist corresponding transactions which can be retrieved when needed
--   10 points: Proper database schema achieving 3rd normal form
--   10 points: Followed proper coding conventions, and a layered architecture
--   5 points: Proper use of DAO design pattern
--   5 points: Different user roles with different levels of access
--   5 points: 70% test coverage on the service layer
 
 **Presentation Score(25 points):**
 
