@@ -34,15 +34,33 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     implementation 'org.slf4j:slf4j-simple:1.7.32'
-    //testImplementation 'org.slf4j:slf4j-simple:1.7.32'
-    //implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
-    //implementation 'org.slf4j:slf4j-simple:1.8.0-beta4'
 
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
 
     // https://mvnrepository.com/artifact/log4j/log4j
     implementation 'log4j:log4j:1.2.17'
+
+    //Provide the IOC container
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation 'org.springframework:spring-core:5.3.20'
+
+    //Provides the Dependency injection features
+    // https://mvnrepository.com/artifact/org.springframework/spring-beans
+    implementation 'org.springframework:spring-beans:5.3.20'
+
+    //Provide annotations, and scanning for later
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    implementation 'org.springframework:spring-context:5.3.20'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-aspects
+    implementation 'org.springframework:spring-aspects:5.3.20'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-orm
+    implementation 'org.springframework:spring-orm:5.3.20'
+
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    implementation 'org.hibernate:hibernate-core:5.5.6.Final'
 }
 
 application {
